@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navigation/pages/page_alert.dart';
+import 'package:navigation/pages/page_simple.dart';
+import 'package:navigation/pages/page_snack.dart';
 
 class PageBottom extends StatefulWidget {
   const PageBottom({Key? key}) : super(key: key);
@@ -40,6 +42,22 @@ class _PageBottomState extends State<PageBottom> {
                   context,
                   MaterialPageRoute(builder: (context){
                     return PageAlert();
+                  })
+              );
+              break;
+            case 1:
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context){
+                    return PageSimple();
+                  })
+              );
+              break;
+            case 2:
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context){
+                    return PageSnack();
                   })
               );
               break;
