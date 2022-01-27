@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation/pages/page_alert.dart';
 
 class PageBottom extends StatefulWidget {
   const PageBottom({Key? key}) : super(key: key);
@@ -26,6 +27,25 @@ class _PageBottomState extends State<PageBottom> {
           Text("Transport = ${choixTransport}")
         ],
       ) ,
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.warning), label: "Alert"),
+          BottomNavigationBarItem(icon: Icon(Icons.forward), label: "Simple"),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "Snack"),
+        ],
+        onTap: (int index){
+          switch(index){
+            case 0:
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context){
+                    return PageAlert();
+                  })
+              );
+              break;
+          }
+        },
+      ),
     );
   }
 
