@@ -38,6 +38,16 @@ class _PageBottomState extends State<PageBottom> {
               },
               child: Text("Replacement SIMPLE")
           ),
+          ElevatedButton(
+              onPressed: (){
+                Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    '/snack',
+                      (route) => false
+                );
+              },
+              child: Text("REMOVE")
+          ),
         ],
       ) ,
       bottomNavigationBar: BottomNavigationBar(
