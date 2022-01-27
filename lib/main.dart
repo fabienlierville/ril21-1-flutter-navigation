@@ -19,6 +19,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const PageBottom(),
+      routes: {
+        "/alert": (BuildContext context) => PageAlert(),
+        "/simple": (BuildContext context) => PageSimple(),
+        "/snack": (BuildContext context) => PageSnack(),
+      },
     );
   }
 }
