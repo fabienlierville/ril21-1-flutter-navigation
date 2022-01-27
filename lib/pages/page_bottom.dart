@@ -26,7 +26,18 @@ class _PageBottomState extends State<PageBottom> {
               onPressed: callBottom,
               child: Text("BOTTOM !")
           ),
-          Text("Transport = ${choixTransport}")
+          Text("Transport = ${choixTransport}"),
+          ElevatedButton(
+              onPressed: (){
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context){
+                      return PageSimple();
+                    })
+                );
+              },
+              child: Text("Replacement SIMPLE")
+          ),
         ],
       ) ,
       bottomNavigationBar: BottomNavigationBar(
