@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation/pages/page_bottom.dart';
 
 class PageAlert extends StatefulWidget {
   const PageAlert({Key? key}) : super(key: key);
@@ -19,7 +20,18 @@ class _PageAlertState extends State<PageAlert> {
           ElevatedButton(
               onPressed: callAlert,
               child: Text("ALERT !")
-          )
+          ),
+          ElevatedButton(
+              onPressed: (){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context){
+                      return PageBottom();
+                    })
+                );
+              },
+              child: Text("Go To Bottom")
+          ),
         ],
       ) ,
     );
@@ -40,7 +52,7 @@ class _PageAlertState extends State<PageAlert> {
                     Navigator.pop(contextDialog);
                   },
                   child: Text("Annuler")
-              )
+              ),
             ],
           );
         }
