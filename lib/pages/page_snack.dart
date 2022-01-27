@@ -19,7 +19,13 @@ class _PageSnackState extends State<PageSnack> {
           ElevatedButton(
               onPressed: callSnack,
               child: Text("SNACK !")
-          )
+          ),
+          ElevatedButton(
+              onPressed: (){
+                Navigator.pop(context);
+              },
+              child: Text("RETOUR !")
+          ),
         ],
       ) ,
     );
