@@ -48,8 +48,51 @@ class _PageSimpleState extends State<PageSimple> {
                   setState(() {
                     choixTransport = "Voiture";
                   });
+                  Navigator.pop(contextDialog);
                 },
-              )
+              ),
+              SimpleDialogOption(
+                child: Row(
+                  children: [
+                    Icon(Icons.airplanemode_active),
+                    Text("Avion")
+                  ],
+                ),
+                onPressed: (){
+                  setState(() {
+                    choixTransport = "Avion";
+                  });
+                  Navigator.pop(contextDialog);
+                },
+              ),
+              SimpleDialogOption(
+                child: Row(
+                  children: [
+                    Icon(Icons.directions_bike),
+                    Text("Bike")
+                  ],
+                ),
+                onPressed: (){
+                  setState(() {
+                    choixTransport = "Bike";
+                  });
+                  Navigator.pop(contextDialog);
+                },
+              ),
+              SimpleDialogOption(
+                child: Row(
+                  children: [
+                    Icon(Icons.directions_boat),
+                    Text("Bateau")
+                  ],
+                ),
+                onPressed: (){
+                  setState(() {
+                    choixTransport = "Bateau";
+                  });
+                  Navigator.pop(contextDialog);
+                },
+              ),
             ],
           );
         }
